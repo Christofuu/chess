@@ -319,6 +319,54 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/King.obj: src/King.cpp.obj
+.PHONY : src/King.obj
+
+# target to build an object file
+src/King.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/King.cpp.obj
+.PHONY : src/King.cpp.obj
+
+src/King.i: src/King.cpp.i
+.PHONY : src/King.i
+
+# target to preprocess a source file
+src/King.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/King.cpp.i
+.PHONY : src/King.cpp.i
+
+src/King.s: src/King.cpp.s
+.PHONY : src/King.s
+
+# target to generate assembly for a file
+src/King.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/King.cpp.s
+.PHONY : src/King.cpp.s
+
+src/NullPiece.obj: src/NullPiece.cpp.obj
+.PHONY : src/NullPiece.obj
+
+# target to build an object file
+src/NullPiece.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/NullPiece.cpp.obj
+.PHONY : src/NullPiece.cpp.obj
+
+src/NullPiece.i: src/NullPiece.cpp.i
+.PHONY : src/NullPiece.i
+
+# target to preprocess a source file
+src/NullPiece.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/NullPiece.cpp.i
+.PHONY : src/NullPiece.cpp.i
+
+src/NullPiece.s: src/NullPiece.cpp.s
+.PHONY : src/NullPiece.s
+
+# target to generate assembly for a file
+src/NullPiece.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/src/NullPiece.cpp.s
+.PHONY : src/NullPiece.cpp.s
+
 src/Piece.obj: src/Piece.cpp.obj
 .PHONY : src/Piece.obj
 
@@ -418,6 +466,12 @@ help:
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s
+	@echo ... src/King.obj
+	@echo ... src/King.i
+	@echo ... src/King.s
+	@echo ... src/NullPiece.obj
+	@echo ... src/NullPiece.i
+	@echo ... src/NullPiece.s
 	@echo ... src/Piece.obj
 	@echo ... src/Piece.i
 	@echo ... src/Piece.s

@@ -1,5 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include "./Board.h"
+#include "./King.h"
+#include "./Game.h"
+#include "NullPiece.h"
+#include <cmath>
+#include <array>
 
 sf::View getLetterboxView(sf::View view, int windowWidth, int windowHeight) {
 
@@ -36,30 +41,39 @@ sf::View getLetterboxView(sf::View view, int windowWidth, int windowHeight) {
     return view;
 }
 
-int main()
-{
-    Board chessboard;
-    unsigned int resX = 1024u;
-    unsigned int resY = 1024u;
+std::array<int,2> detectMouseClick(sf::Event event, const Board& chessboard, sf::RenderWindow& window) {
+    std::array<int, 2> coords = {-1, -1};
 
-    sf::Texture chessPiecesTexture;
-
-    if (!chessPiecesTexture.loadFromFile("C:/Users/Chris/CLionProjects/chess/assets/pieces-sprite-map.png")) {
-        std::cout << "   ERROR: Pieces Textures Not Found!" << std::endl;
-        return EXIT_FAILURE;
+    if (event.mouseButton.button == sf::Mouse::Left && event.type == sf::Event::MouseButtonReleased) {
+        if (chessboard.boardSprite.getGlobalBounds().contains(window.mapPixelToCoords(sf::Mouse::getPosition(window)))) {
+            coords[0] = floor(window.mapPixelToCoords(sf::Mouse::getPosition(window)).x / 128);
+            coords[1] = floor(window.mapPixelToCoords(sf::Mouse::getPosition(window)).y / 128);
+        }
+        else {
+            std::cout<< "click out of board bounds" << std::endl;
+        }
     }
 
-    sf::Sprite whiteKing(chessPiecesTexture, sf::IntRect(0,0,108,108));
-    sf::Vector2f whiteKingPosition(512 + 10, 896 + 10);
+    return coords;
+}
 
-    whiteKing.setPosition(whiteKingPosition);
 
-    sf::FloatRect kingBounds = whiteKing.getGlobalBounds();
-    sf::RectangleShape redOutline(sf::Vector2f(kingBounds.width, kingBounds.height));
-    redOutline.setPosition(kingBounds.left, kingBounds.top);
-    redOutline.setOutlineColor(sf::Color::Red);
-    redOutline.setOutlineThickness(2.0f);
-    redOutline.setFillColor(sf::Color::Transparent);
+int main()
+{
+    Game game;
+    game.loadTexture();
+
+    bool isPieceSelected = false;
+    Piece* selectedPiece;
+    NullPiece nullPiece;
+
+    game.createPiece('K');
+    game.createPiece('k');
+
+    int currentTileSize = 128;
+
+    unsigned int resX = 1024u;
+    unsigned int resY = 1024u;
 
     auto window = sf::RenderWindow{ { resX, resY }, "Chess", (sf::Style::Resize + sf::Style::Close) };
     window.setFramerateLimit(144);
@@ -82,14 +96,45 @@ int main()
             if (event.type == sf::Event::Resized) {
                 view = getLetterboxView(view, event.size.width, event.size.height);
             }
+
+            if (event.mouseButton.button == sf::Mouse::Left && event.type == sf::Event::MouseButtonReleased) {
+                std::array<int, 2> coords = detectMouseClick(event, game.getBoard(), window);
+                int rank = coords[0];
+                int file = coords[1];
+
+                std::cout << rank << " " << file << std::endl;
+
+                if (!isPieceSelected) {
+                    if (game.isValidPiece(game.gameState[rank][file])) {
+                        selectedPiece = game.gameState[rank][file];
+                        isPieceSelected = true;
+                    }
+                    else {
+                        std::cout << "invalid piece" << std::endl;
+                    }
+                    std::cout << "piece selected: " << isPieceSelected << std::endl;
+                }
+                else {
+                    if (game.isLegalMove(selectedPiece, rank, file)) {
+
+                        game.movePiece(selectedPiece, rank, file);
+                    }
+                    isPieceSelected = false;
+                    selectedPiece = &nullPiece;
+                }
+            }
+
+
+            detectMouseClick(event, game.getBoard(), window);
         }
 
-
         window.clear();
+
         window.setView(view);
-        window.draw(chessboard.boardSprite);
-        window.draw(whiteKing);
-        window.draw(redOutline);
+        window.draw(game.getBoard().boardSprite);
+        window.draw(game.gameState[4][7]->pieceSprite);
+        window.draw(game.gameState[4][0]->pieceSprite);
+
         window.display();
     }
 }

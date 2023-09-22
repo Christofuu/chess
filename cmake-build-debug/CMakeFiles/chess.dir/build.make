@@ -143,13 +143,45 @@ CMakeFiles/chess.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/Game.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Chris\CLionProjects\chess\src\Game.cpp -o CMakeFiles\chess.dir\src\Game.cpp.s
 
+CMakeFiles/chess.dir/src/King.cpp.obj: CMakeFiles/chess.dir/flags.make
+CMakeFiles/chess.dir/src/King.cpp.obj: CMakeFiles/chess.dir/includes_CXX.rsp
+CMakeFiles/chess.dir/src/King.cpp.obj: C:/Users/Chris/CLionProjects/chess/src/King.cpp
+CMakeFiles/chess.dir/src/King.cpp.obj: CMakeFiles/chess.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Chris\CLionProjects\chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chess.dir/src/King.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/King.cpp.obj -MF CMakeFiles\chess.dir\src\King.cpp.obj.d -o CMakeFiles\chess.dir\src\King.cpp.obj -c C:\Users\Chris\CLionProjects\chess\src\King.cpp
+
+CMakeFiles/chess.dir/src/King.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chess.dir/src/King.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Chris\CLionProjects\chess\src\King.cpp > CMakeFiles\chess.dir\src\King.cpp.i
+
+CMakeFiles/chess.dir/src/King.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/King.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Chris\CLionProjects\chess\src\King.cpp -o CMakeFiles\chess.dir\src\King.cpp.s
+
+CMakeFiles/chess.dir/src/NullPiece.cpp.obj: CMakeFiles/chess.dir/flags.make
+CMakeFiles/chess.dir/src/NullPiece.cpp.obj: CMakeFiles/chess.dir/includes_CXX.rsp
+CMakeFiles/chess.dir/src/NullPiece.cpp.obj: C:/Users/Chris/CLionProjects/chess/src/NullPiece.cpp
+CMakeFiles/chess.dir/src/NullPiece.cpp.obj: CMakeFiles/chess.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Chris\CLionProjects\chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chess.dir/src/NullPiece.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/NullPiece.cpp.obj -MF CMakeFiles\chess.dir\src\NullPiece.cpp.obj.d -o CMakeFiles\chess.dir\src\NullPiece.cpp.obj -c C:\Users\Chris\CLionProjects\chess\src\NullPiece.cpp
+
+CMakeFiles/chess.dir/src/NullPiece.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chess.dir/src/NullPiece.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Chris\CLionProjects\chess\src\NullPiece.cpp > CMakeFiles\chess.dir\src\NullPiece.cpp.i
+
+CMakeFiles/chess.dir/src/NullPiece.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/NullPiece.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Chris\CLionProjects\chess\src\NullPiece.cpp -o CMakeFiles\chess.dir\src\NullPiece.cpp.s
+
 # Object files for target chess
 chess_OBJECTS = \
 "CMakeFiles/chess.dir/src/main.cpp.obj" \
 "CMakeFiles/chess.dir/src/Board.cpp.obj" \
 "CMakeFiles/chess.dir/src/Tile.cpp.obj" \
 "CMakeFiles/chess.dir/src/Piece.cpp.obj" \
-"CMakeFiles/chess.dir/src/Game.cpp.obj"
+"CMakeFiles/chess.dir/src/Game.cpp.obj" \
+"CMakeFiles/chess.dir/src/King.cpp.obj" \
+"CMakeFiles/chess.dir/src/NullPiece.cpp.obj"
 
 # External object files for target chess
 chess_EXTERNAL_OBJECTS =
@@ -159,6 +191,8 @@ chess.exe: CMakeFiles/chess.dir/src/Board.cpp.obj
 chess.exe: CMakeFiles/chess.dir/src/Tile.cpp.obj
 chess.exe: CMakeFiles/chess.dir/src/Piece.cpp.obj
 chess.exe: CMakeFiles/chess.dir/src/Game.cpp.obj
+chess.exe: CMakeFiles/chess.dir/src/King.cpp.obj
+chess.exe: CMakeFiles/chess.dir/src/NullPiece.cpp.obj
 chess.exe: CMakeFiles/chess.dir/build.make
 chess.exe: _deps/sfml-build/lib/libsfml-graphics-d.a
 chess.exe: _deps/sfml-build/lib/libsfml-window-d.a
@@ -166,7 +200,7 @@ chess.exe: _deps/sfml-build/lib/libsfml-system-d.a
 chess.exe: CMakeFiles/chess.dir/linkLibs.rsp
 chess.exe: CMakeFiles/chess.dir/objects1.rsp
 chess.exe: CMakeFiles/chess.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Chris\CLionProjects\chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable chess.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Chris\CLionProjects\chess\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable chess.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\chess.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Users\Chris\AppData\Local\JetBrains\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -E copy C:/Users/Chris/CLionProjects/chess/cmake-build-debug/_deps/sfml-build/lib/sfml-graphics-d-2.dll C:/Users/Chris/CLionProjects/chess/cmake-build-debug/_deps/sfml-build/lib/sfml-window-d-2.dll C:/Users/Chris/CLionProjects/chess/cmake-build-debug/_deps/sfml-build/lib/sfml-system-d-2.dll C:/Users/Chris/CLionProjects/chess/cmake-build-debug
 

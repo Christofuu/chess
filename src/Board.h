@@ -19,15 +19,14 @@ class Board {
 
         const int numRows = 8, numCols = 8;
 
-        Piece getPiece();
-
-        void movePiece(Piece piece);
-
-        bool isLegalMove();
-
 
         void generateTiles();
-        sf::Vector2f getTilePosition(int row, int col);
+
+        void drawTiles(sf::RenderWindow& window) const;
+
+        void updateTiles(int tileSize, sf::RenderWindow& window);
+
+        sf::Vector2i getTilePosition(int row, int col);
 
 
     private:

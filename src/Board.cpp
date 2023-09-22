@@ -21,19 +21,19 @@ void Board::generateTiles() {
             // rule to determine tile color
             Tile::Color tileColor = (row + col) % 2 == 0 ? Tile::Color::DARK : Tile::Color::LIGHT;
             // rule to determine tile position
-            sf::Vector2f tilePosition(col * tileSize.x, row * tileSize.y);
-            sf::Vector2i tileIndex(row, col);
+            sf::Vector2i tilePosition(col * tileSize.x, row * tileSize.y);
 
             // populate chessboard with tiles
             chessboard[row][col] = Tile(static_cast<char>('a' + col), row + 1, tileColor, tilePosition, tileSize);
 
-            std::cout << "Tile: " << chessboard[row][col].getFile() << chessboard[row][col].getRank() << " " << static_cast<bool>(tileColor)
-                      << " generated." << " Position: " << chessboard[row][col].getTilePosition().x << ", " << chessboard[row][col].getTilePosition().y << std::endl;
+//            std::cout << "Tile: " << chessboard[row][col].getFile() << chessboard[row][col].getRank() << " " << static_cast<bool>(tileColor)
+//                      << " generated." << " Position: " << chessboard[row][col].getTilePosition().x << ", " << chessboard[row][col].getTilePosition().y << std::endl;
         }
     }
 }
 
-sf::Vector2f Board::getTilePosition(int row, int col) {
+sf::Vector2i Board::getTilePosition(int row, int col) {
     return chessboard[row][col].getTilePosition();
 }
+
 

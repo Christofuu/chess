@@ -9,7 +9,7 @@ using namespace std;
 
 Tile::Tile() : file('a'), rank(1), tileColor(Color::LIGHT) {}
 
-Tile::Tile(char file, int rank, Color tileColor, sf::Vector2f position, sf::Vector2f size ): file(file), rank(rank), tileColor(tileColor), tilePosition(position), tileSize(size) {
+Tile::Tile(char file, int rank, Color tileColor, sf::Vector2i position, sf::Vector2f size ): file(file), rank(rank), tileColor(tileColor), tilePosition(position), tileSize(size) {
     setColor(tileColor);
 }
 
@@ -21,7 +21,7 @@ int Tile::getRank() const {
     return rank;
 }
 
-sf::Vector2f Tile::getTilePosition() const {
+sf::Vector2i Tile::getTilePosition() const {
     return tilePosition;
 }
 
@@ -46,7 +46,7 @@ void Tile::setColor(Color tileColor) {
     this->tileColor = tileColor;
 }
 
-void Tile::setPosition(sf::Vector2f tilePosition) {
+void Tile::setPosition(sf::Vector2i tilePosition) {
     this->tilePosition = tilePosition;
 }
 

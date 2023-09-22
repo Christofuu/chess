@@ -13,7 +13,14 @@ add_executable(chess src/main.cpp src/Board.cpp src/Board.h
         src/Piece.cpp
         src/Piece.h
         src/Game.cpp
-        src/Game.h)
+        src/Game.h
+        src/King.cpp
+        src/King.h
+        src/King.h
+        src/NullPiece.cpp
+        src/NullPiece.h
+        src/NullPiece.h
+        src/NullPiece.cpp)
 target_link_libraries(chess PRIVATE sfml-graphics)
 target_compile_features(chess PRIVATE cxx_std_17)
 if (WIN32 AND BUILD_SHARED_LIBS)

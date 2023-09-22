@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Chris/CLionProjects/chess/src/Board.cpp" "CMakeFiles/chess.dir/src/Board.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/Board.cpp.obj.d"
   "C:/Users/Chris/CLionProjects/chess/src/Game.cpp" "CMakeFiles/chess.dir/src/Game.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/Game.cpp.obj.d"
+  "C:/Users/Chris/CLionProjects/chess/src/King.cpp" "CMakeFiles/chess.dir/src/King.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/King.cpp.obj.d"
+  "C:/Users/Chris/CLionProjects/chess/src/NullPiece.cpp" "CMakeFiles/chess.dir/src/NullPiece.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/NullPiece.cpp.obj.d"
   "C:/Users/Chris/CLionProjects/chess/src/Piece.cpp" "CMakeFiles/chess.dir/src/Piece.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/Piece.cpp.obj.d"
   "C:/Users/Chris/CLionProjects/chess/src/Tile.cpp" "CMakeFiles/chess.dir/src/Tile.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/Tile.cpp.obj.d"
   "C:/Users/Chris/CLionProjects/chess/src/main.cpp" "CMakeFiles/chess.dir/src/main.cpp.obj" "gcc" "CMakeFiles/chess.dir/src/main.cpp.obj.d"

@@ -1220,6 +1220,18 @@
 		<Unit filename="C:/Users/Chris/CLionProjects/chess/src/Game.h">
 			<Option target="chess"/>
 		</Unit>
+		<Unit filename="C:/Users/Chris/CLionProjects/chess/src/King.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="C:/Users/Chris/CLionProjects/chess/src/King.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="C:/Users/Chris/CLionProjects/chess/src/NullPiece.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="C:/Users/Chris/CLionProjects/chess/src/NullPiece.h">
+			<Option target="chess"/>
+		</Unit>
 		<Unit filename="C:/Users/Chris/CLionProjects/chess/src/Piece.cpp">
 			<Option target="chess"/>
 		</Unit>

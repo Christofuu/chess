@@ -17,28 +17,28 @@ public:
 
     // Constructors
     Tile();
-    Tile(char file, int rank, Color tileColor, sf::Vector2f position, sf::Vector2f size);
+    Tile(char file, int rank, Color tileColor, sf::Vector2i position, sf::Vector2f size);
 
     // Getters
     char getFile() const;
     int getRank() const;
     Tile::Color getColor() const;
-    sf::Vector2f getTilePosition() const;
+    sf::Vector2i getTilePosition() const;
     sf::Vector2f getTileSize() const;
 
     // Setters
     void setFile(char file);
     void setRank(int rank);
     void setColor(Color tileColor);
-    void setPosition(sf::Vector2f tilePosition);
+    void setPosition(sf::Vector2i tilePosition);
     void setSize(sf::Vector2f tileSize);
 
 private:
     char file;
     int rank;
     Color tileColor;
-    sf::Vector2f tilePosition;
-    sf::Vector2f tileSize;
+    sf::Vector2i tilePosition;
+    sf::Vector2f tileSize = sf::Vector2f(128,128);
 };
 
 
